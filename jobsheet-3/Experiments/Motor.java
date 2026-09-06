@@ -1,8 +1,8 @@
 public class Motor {
 
-    public String licensePlate;
-    public boolean isMachineOn;
-    public int speed;
+    private String licensePlate;
+    private boolean isMachineOn;
+    private int speed;
 
     public void displayStatus() {
         System.out.println("License Plate: " + this.licensePlate);
