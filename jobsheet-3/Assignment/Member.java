@@ -41,7 +41,11 @@ public class Member {
     }
 
     public void installments(int amount) {
-        this.loanAmount -= amount;
+        if(amount < loanAmount * 0.10) {
+            System.out.println("Sorry, the installment must  e 10% of the loan amount");
+        } else {
+            loanAmount -= amount;
+        }
     }
 
 }
