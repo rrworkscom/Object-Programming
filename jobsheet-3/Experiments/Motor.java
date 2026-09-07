@@ -27,8 +27,11 @@ public class Motor {
     public void setSpeed(int speed) {
         if(!this.isMachineOn && speed > 0) {
             System.out.println("The speed must not exceed 0 when the engine is off");
+        } else if(speed < 0) {
+            System.out.println("The speed must not be negative");
         } else if (speed > 100) {
             System.out.println("The speed must not exceed 100");
+            this.speed = 100;
         } else {
             this.speed = speed;
         }
