@@ -36,6 +36,14 @@ public class Passenger {
         this.email = email;
     }
 
+    public String getFlightCode() {
+        return flightCode;
+    }
+
+    public void setFlightCode(String flightCode) {
+        this.flightCode = flightCode;
+    }
+
     public String getInfo() {
         String info = "";
 
