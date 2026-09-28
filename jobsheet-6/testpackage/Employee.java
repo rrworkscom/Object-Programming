@@ -1,8 +1,8 @@
-package testpackage;
+
 public class Employee {
     public String nip;
     public String name;
-    public double salary;
+    protected double salary;
 
     public Employee() {
         System.out.println("Object from class Employee has created");
