@@ -7,6 +7,6 @@ public class InheritanceDemo {
         lecturer1.salary = 3000000;
         lecturer1.nidn = "1989432439";
 
-        System.out.println(lecturer1.getInfo());
+        System.out.println(lecturer1.getAllInfo());
     }
 }
