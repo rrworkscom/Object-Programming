@@ -6,11 +6,8 @@ public class Lecturer extends Employee {
     }
 
     public String getAllInfo() {
-        String info = "";
-        info += "NIP        : " + super.nip + "\n";
-        info += "Name       : " + super.name + "\n";
-        info += "Salary     : " + super.salary + "\n";
-        info += "NIDN       : " + this.nidn + "\n";
+        String info = super.getInfo();
+        info += this.getInfo();
 
         return info;
     }
