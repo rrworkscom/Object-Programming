@@ -1,8 +1,8 @@
 public class Lecturer extends Employee {
     public String nidn;
 
-    public Lecturer() {
-        System.out.println("Object from class Lecturer has created");
+    public Lecturer(String nip, String name, double salary, String nidn) {
+        System.out.println("Object from class Lecturer created with parameterized constructor");
     }
 
     public String getAllInfo() {
