@@ -1,11 +1,16 @@
-
 public class Employee {
     public String nip;
     public String name;
     protected double salary;
 
-    public Employee() {
-        System.out.println("Object from class Employee has created");
+//    public Employee() {
+//        System.out.println("Object from class Employee has created");
+//    }
+
+    public Employee(String nip, String name, double salary) {
+        this.nip = nip;
+        this.name = name;
+        this.salary = salary;
     }
 
     public String getInfo() {
