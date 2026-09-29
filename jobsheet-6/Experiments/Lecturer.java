@@ -1,9 +1,10 @@
 public class Lecturer extends Employee {
+
     public String nidn;
 
-    public Lecturer(String nip, String name, double salary, String nidn) {
-        super(nip, name, salary);
+    public Lecturer(String nip, String nama, double salary, String nidn) {
         this.nidn = nidn;
+        super(nip, nama, salary);
     }
 
     public String getInfo() {
