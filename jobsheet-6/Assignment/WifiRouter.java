@@ -1,4 +1,6 @@
+
 public class WifiRouter extends Electronic {
+
     public int speed;
     public double coverage;
 
@@ -6,8 +8,8 @@ public class WifiRouter extends Electronic {
         super();
     }
 
-    public WifiRouter(String code, String brand, int warranty, int speed, double coverage) {
-        super(code, brand, warranty);
+    public WifiRouter(String code, String brand, int warranty, double price, int speed, double coverage) {
+        super(code, brand, warranty, price);
         this.speed = speed;
         this.coverage = coverage;
     }
@@ -16,10 +18,17 @@ public class WifiRouter extends Electronic {
         System.out.println("Devices connected to WiFi.");
     }
 
+    @Override
+    public double tax() {
+        return price * 0.11;
+    }
+
+    @Override
     public String getInfo() {
         String info = "";
         info += "Speed      : " + speed + " Mbps\n";
-        info += "Coverage   : " + coverage + " GHz\n";
+        info += "Coverage   : " + coverage + " m²\n";
+        info += "Tax        : " + tax() + "\n";
 
         return info;
     }

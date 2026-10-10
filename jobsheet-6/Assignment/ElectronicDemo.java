@@ -2,9 +2,11 @@ public class ElectronicDemo {
 
     public static void main(String[] args) {
 
-        WifiRouter router1 = new WifiRouter("WR001", "Starlink", 2, 250, 5);
+        WifiRouter router1 = new WifiRouter("WR001", "Starlink", 2, 
+            7500000, 5, 50);
 
-        Refrigerator refrigerator1 = new Refrigerator("RRG001", "Samsung", 3, 255, "RT25");
+        Refrigerator refrigerator1 = new Refrigerator("RRG001", "Samsung", 3,
+            9500000, 250, "RT25");
 
         System.out.println("   WIFI ROUTER");
         System.out.println(router1.getAllInfo());

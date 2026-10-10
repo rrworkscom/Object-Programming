@@ -1,4 +1,5 @@
 public class Refrigerator extends Electronic {
+
     public double capacity;
     public String model;
 
@@ -6,8 +7,8 @@ public class Refrigerator extends Electronic {
         super();
     }
 
-    public Refrigerator(String code, String brand, int warranty, double capacity, String model) {
-        super(code, brand, warranty);
+    public Refrigerator(String code, String brand, int warranty, double price, double capacity, String model) {
+        super(code, brand, warranty, price);
         this.capacity = capacity;
         this.model = model;
     }
@@ -16,10 +17,17 @@ public class Refrigerator extends Electronic {
         System.out.println("Refrigerator mode: Cool");
     }
 
+    @Override
+    public double tax() {
+        return price * 0.11;
+    }
+
+    @Override
     public String getInfo() {
         String info = "";
         info += "Capacity   : " + capacity + " L\n";
         info += "Model      : " + model + "\n";
+        info += "Tax        : " + tax() + "\n";
 
         return info;
     }
