@@ -1,4 +1,3 @@
-
 public class WifiRouter extends Electronic {
 
     public int speed;
@@ -24,12 +23,16 @@ public class WifiRouter extends Electronic {
     }
 
     @Override
+    public double finalPrice() {
+        return price + tax();
+    }
+
+    @Override
     public String getInfo() {
         String info = "";
         info += "Speed      : " + speed + " Mbps\n";
-        info += "Coverage   : " + coverage + " m²\n";
-        info += "Tax        : " + tax() + "\n";
-
+        info += "Coverage   : " + coverage + " m2\n";
+        
         return info;
     }
 

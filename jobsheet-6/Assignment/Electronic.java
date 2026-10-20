@@ -1,4 +1,4 @@
-public class Electronic {
+public abstract class Electronic {
 
     private final String code;
     public String brand;
@@ -25,9 +25,9 @@ public class Electronic {
         return true;
     }
 
-    public double tax() {
-        return price * 0.11;
-    }
+    public abstract double tax();
+
+    public abstract double finalPrice();
 
     public String getInfo() {
         String info = "";
@@ -35,6 +35,8 @@ public class Electronic {
         info += "Brand      : " + brand + "\n";
         info += "Warranty   : " + warranty + " years\n";
         info += "Price      : " + price + "\n";
+        info += "Tax        : " + tax() + "\n";
+        info += "Final Price: " + finalPrice() + "\n";
 
         return info;
     }

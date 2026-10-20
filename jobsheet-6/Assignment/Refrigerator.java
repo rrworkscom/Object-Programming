@@ -23,12 +23,16 @@ public class Refrigerator extends Electronic {
     }
 
     @Override
+    public double finalPrice() {
+        return price + tax();
+    }
+
+    @Override
     public String getInfo() {
         String info = "";
         info += "Capacity   : " + capacity + " L\n";
         info += "Model      : " + model + "\n";
-        info += "Tax        : " + tax() + "\n";
-
+        
         return info;
     }
 

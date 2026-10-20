@@ -3,15 +3,17 @@ public class ElectronicDemo {
     public static void main(String[] args) {
 
         WifiRouter router1 = new WifiRouter("WR001", "Starlink", 2, 
-            7500000, 5, 50);
+        7000000, 5, 50);
 
-        Refrigerator refrigerator1 = new Refrigerator("RRG001", "Samsung", 3,
-            9500000, 250, "RT25");
+        Refrigerator refrigerator1 = new Refrigerator("RRG001", "Samsung", 3, 
+        9500000, 250, "RT25");
 
         System.out.println("   WIFI ROUTER");
         System.out.println(router1.getAllInfo());
         router1.turnOn();
         router1.connectedDevice();
+        router1.tax();
+        router1.finalPrice();
 
         System.out.println();
 
@@ -19,5 +21,7 @@ public class ElectronicDemo {
         System.out.println(refrigerator1.getAllInfo());
         refrigerator1.turnOn();
         refrigerator1.mode();
+        refrigerator1.tax();
+        refrigerator1.finalPrice();
     }
 }
